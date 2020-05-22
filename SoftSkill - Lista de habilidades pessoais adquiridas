@@ -1,22 +1,28 @@
-      private int hId;
-     private String CreationDate;
-     private String habiName;
-     private String hLearning  
-     private int hLevel;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.room.ColumnInfo;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "softs")
+public class SoftSkill {
    
-Softskill public ( @Nullable  String  name , String  Learning , int  level, String CreationDate ) {
-        habiName = nome;
-        Learning= situação;
-        levelh = nivel;
-        CreationDate = creationDate;
-    }
-    @PrimaryKey ( autoGenerate  =  true )
+ private String CreationDate;
+    private String hLearning;
+
+    public SoftSkill(@Nullable String name, String learning, int level, String creationDate) {
+        habiName = name;
+        hLearning = learning;
+        hLevel = level;
+        CreationDate = creationDate; }
+        
+  @PrimaryKey(autoGenerate = true)
     @NonNull
-    @ColumnInfo ( name  =  " SoftskillId " )
-    private  int hId;
+    @ColumnInfo(name = "SoftskillId")
+    private int hId;
     @Nullable
-    @ColumnInfo ( name  =  " habiName " )
-    private  String habiName;
+    @ColumnInfo(name = "habiName")
+    private String habiName;
  
     public  int  getId () {
         return hID;
